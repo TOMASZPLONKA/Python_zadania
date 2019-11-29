@@ -17,8 +17,8 @@ while True:
     wer = (p * (p-dane[0]) * (p-dane[1]) * (p-dane[2]))
 
     if wer > 0: # sprawdzenie czy liczba podpierwiastkowa jest większa od 0 - nie ma pierwiastka z liczby ujemnej
-        P = math.sqrt(p * (p-dane[0]) * (p-dane[1]) * (p-dane[2]))
-        print(f'Pole trójkąta = {P}')
+        pole = math.sqrt(p * (p-dane[0]) * (p-dane[1]) * (p-dane[2]))
+        print(f'Pole trójkąta = {pole}')
         break
     else:
         print(f'Podane liczby nie stanowią boków trójkąta')
