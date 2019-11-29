@@ -6,13 +6,13 @@ Użytkownik ma odgadnąć (no, policzyć w głowie) wynik. Program pyta o wynik 
 
 """
 import random
-A = random.randint(0, 99)
-B = random.randint(0, 99)
-print(f'Wylosowane liczby to: {A} i {B}')
+a = random.randint(0, 99)
+b = random.randint(0, 99)
+print(f'Wylosowane liczby to: {a} i {b}')
 suma = int(input('Suma liczb A i B to: '))
 while True:
-    if suma == A + B:
-       print(f'Brawo! Suma liczb {A} i {B} równa się {suma}.')
+    if suma == a + b:
+       print(f'Brawo! Suma liczb {a} i {b} równa się {suma}.')
        break
     else:
         print('Niestety to nie jest suma liczb A i B. Spróbuj jeszcze raz.')
