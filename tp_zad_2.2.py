@@ -15,6 +15,6 @@ g = 1   # liczba gwiazdek w wierszu
 l = int(input("Podaj dodatnią liczbę całkowitą: "))     # wprowadzona liczba
 
 while w <= l:
-    w = w + 1
     print(f'{("*" * g): ^{l*2-1}}')
+    w = w + 1
     g = g + 2
