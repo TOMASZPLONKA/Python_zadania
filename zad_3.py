@@ -1,23 +1,14 @@
-"""
+liczby= [-5, -10, 6, -11, 1, 0, 8, -2, -4, -6]
 
-"""
+liczba_dodatnich = 0
+liczba_ujemnych = 0
 
+for element in liczby: # dla każdego elementu listy liczby
+    if element <0:
+        liczba_ujemnych += 1
+    elif element >0:
+        liczba_dodatnich += 1
 
-def policz_znaki(napis, start = '[', end = ']'):
-    if napis.count(start) != 1 or napis.count(end) != 1:
-        return 0
-    return len(napis[napis.index(start) + 1 : napis.index(end)])
+print(f'Liczb ujemnych = {liczba_ujemnych}')
+print(f'Liczb dodatnich = {liczba_dodatnich}')
 
-
-def test_policz_znaki_w_pustym_napisie():
-    assert policz_znaki(napis='') == 0
-
-def test_niepusty_napis_bez_znacznikow():
-    assert policz_znaki('ala ma kota') == 0
-
-def test_niepusty_napis_domylne_znaczniki():
-    assert policz_znaki('ala ma [kota], a kot ma kompilator') == 4
-def test_inny_start():
-    assert policz_znaki('ala ma >kota], a kot ma kompilator', '>') == 4
-def test_inny_poczatek_i_koniec():
-    assert policz_znaki('ala ma !kota!, a kot ma kompilator', '!', '!') == 4
