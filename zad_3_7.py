@@ -1,0 +1,74 @@
+"""
+Zaimplementuj funkcję przycinającą listę na podstawie podanego
+warunku początkowego oraz końcowego:
+Przykład użycia:
+przytnij(
+data=[1, 2, 3, 4, 5, 6, 7],
+start=lambda x: x > 3,
+stop=lambda x: x == 6,
+)
+[4, 5, 6]
+
+"""
+data=[1, 2, 3, 4, 5, 6, 7]
+"""
+for indeks, wartosc in enumerate(data):
+    print(indeks,wartosc)"""
+
+def przytnij(data,start,stop):
+    #znajdujemy klucz w liście data, od którego mamy zacząć przycinać
+    for indeks, wartosc in enumerate(data):
+        if start(wartosc) == True:
+            break
+    else:
+        return[]
+    # w tym miejscu wiem jaki jest indeks od którego mam zacząć ciąć
+
+    rezultat = []
+    for wartosc in data[indeks:]:
+        rezultat.append(wartosc)
+        if stop(wartosc) == True:
+            break
+    return rezultat
+wynik = przytnij(
+data=[1, 2, 3, 4, 5, 6, 7],
+start=lambda x: x > 2,
+stop=lambda x: x == 6
+)
+print(wynik)
+
+
+def test_zadan():
+    assert przytnij(
+                data=[1, 2, 3, 4, 5, 6, 7],
+                start=lambda x: False,
+                stop=lambda x: x == 6,
+                ) == []
+
+def test_ostatni():
+    assert przytnij(
+                data=[1, 2, 3, 4, 5, 6, 7],
+                start=lambda x: x == 7,
+                stop=lambda x: x == 6,
+                ) == [7]
+
+def test_wieksze_od_3_skoncz_na_6():
+    assert przytnij(
+                data=[1, 2, 3, 4, 4, 5, 6, 7],
+                start=lambda x: x > 3,
+                stop=lambda x: x == 6,
+                ) == [4, 4, 5, 6]
+
+def test_wieksze_zacznij_od_2_skoncz_na_mniejszej_niz_7():
+    assert przytnij(
+                data=[3,2,3,6,3,4,7],
+                start=lambda x: x == 2,
+                stop=lambda x: x < 7,
+                ) == [2]
+
+def test_wieksze_zacznij_od_mniejszej_niz_7_skoncz_na_2():
+    assert przytnij(
+                data=[9,1,6,189,4,7,2,4],
+                start=lambda x: x < 7,
+                stop=lambda x: x == 2,
+                ) == [1,6,189,4,7,2]

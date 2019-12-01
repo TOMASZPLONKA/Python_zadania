@@ -252,4 +252,27 @@ if zmienna:
     print("PRAWDA")
 else:
     print("FAŁSZ")
+    print()
+
+###
+print(print('Ala ma kota'))
+if print("Ala ma kota"):
+    print("Jest true")
+else:
+    print('Jest false')
+    print()
+
+zmienna = 0
+if zmienna <2 or print('Ala ma kota'):
+    print('PRAWDA')
+else:
+    print("FAŁSZ")
+
+
+### DEKORATORY
+
+
+
+
+
 
