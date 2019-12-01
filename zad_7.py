@@ -1,10 +1,6 @@
-napis = input("Podaj napis: ")
-samogloski = ['a','e','i','o','u'] # lista
-samogloski = ('a','e','i','o','u') # tupla
-samogloski = 'aeiou' # ciąg znaków - też zadziała
-ile_samoglosek = 0
+liczba = int(input("Podaj liczbę: "))
 
-for znak in napis.lower():
-    if znak in samogloski:
-        ile_samoglosek +=1
-print(f'Liczba samogłosek w podanym napisie: {ile_samoglosek} ')
+wynik = (liczba % 2 != 0 and liczba % 3 == 0 and liczba > 10) or liczba == 7
+
+# proces wyliczania złożonego wyrażenia (takiego, które nie jest zwykłą wartością) nazywamy ewaluacją
+print(f'Wynik: {wynik}')

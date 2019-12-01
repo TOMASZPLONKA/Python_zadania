@@ -1,21 +1,17 @@
-liczby = list() # liczby = [] - tworzy pustą listę
+"""
 
-while len(liczby) <= 10:
-    liczba = int(input("Podaj liczbę: "))
-    liczby.append(liczba)
+"""
+# nazwa zmiennej = wartość
+# = - operator przypisania
+podstawa_a = 3 # python tworzy zmienną podstawa_a i wkłada do niej wartość 3
+podstawa_b = 9
+wysokosc = 6.5
 
-print(liczby)
-srednia = sum(liczby) / len(liczby)
-print(srednia)
+print(podstawa_a)
 
+# możemy do zmiennej przypisywać WYNIK wyrażeń złożonych
+pole_trapezu = (podstawa_a+podstawa_b)/2*wysokosc
+print(pole_trapezu)
 
-lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-i = 0
-while i < len(lista):
-    print(lista[i])
-    i=+1
-
-# PĘTLA FOR
-
-for x in lista:
-    print(x)
+# strona internetowa PEP - standardy - jak pisać w phytonie
+# PEP 8 opisuje jak powinien wyglądać kod

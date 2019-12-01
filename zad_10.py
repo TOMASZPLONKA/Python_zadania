@@ -1,28 +1,20 @@
-"""
-Napisz program zliczający liczbę wystąpień każdego znaku w
-podanym przez użytkownika napisie.
-"""
+liczba_1 = int(input("Podaj liczbę 1: "))
+liczba_2 = int(input("Podaj liczbę 2: "))
+operacja = (input("Podaj operację (=, -, *, /): "))
 
-napis = input("Podaj napis do zliczenia liczby znaków: ")
-wystapienia = {}
-"""
-for znak in napis:
-    if znak not in wystapienia:
-        wystapienia[znak] = 1
-    else:
-        wystapienia[znak] +=1
-print(wystapienia)
-"""
-### drugi sposób
+if operacja == '+':
+    wynik = liczba_1 + liczba_2
+elif operacja == '-':
+    wynik = liczba_1 - liczba_2
+elif operacja == '*':
+    wynik = liczba_1 * liczba_2
+elif operacja == '/':
+    wynik = liczba_1 / liczba_2
+else:
+    wynik = None
 
-for znak in napis:
-    if znak not in wystapienia:
-        wystapienia[znak] = 0
-    wystapienia[znak] +=1
-print(wystapienia)
 
-print()
-
-# sorted() sortuje listę tupli po pierwszym elemencie tupli, czyli po kluczu słownika
-for litera, liczba_wystapien in sorted(wystapienia.items()):
-    print(f'{litera} = {liczba_wystapien}')
+if wynik == None:
+    print('Podałeś nieprawidłowe dane')
+else:
+    print(f'Wynik: {wynik}')

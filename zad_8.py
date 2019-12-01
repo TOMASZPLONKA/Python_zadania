@@ -1,18 +1,7 @@
-napis = input("Podaj napis: ")
+wymiar_a = int(input("Podaj wymiar a w cm: "))
+wymiar_b = int(input("Podaj wymiar b w cm: "))
+wymiar_c = int(input("Podaj wymiar c w cm: "))
 
-if napis.count('<') != 1 or napis.count('>') != 1:
-    print('Zła liczba nawiasów!')
-    exit() # uruchomienie exit powoduje natychmiastowe zatrzymanie programu
+objetosc = wymiar_a  * wymiar_b * wymiar_c
 
-czy_zliczac = False
-ile_znakow = 0
-
-for znak in napis:
-    if znak == '<':
-         czy_zliczac = True
-    elif znak == '>':
-         czy_zliczac = False
-    elif czy_zliczac == True:
-        ile_znakow += 1
-
-print(f'Liczba znaków pomiędzy znakami "<" i ">": {ile_znakow} ')
+print(f' Objętość opakowania jest większa od 1 litra: {objetosc > 1000}')
