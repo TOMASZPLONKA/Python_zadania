@@ -18,4 +18,4 @@ print(kilometry_na_mile.__doc__ )
 print(60*'=')
 
 def test_kilometry_na_mile():
-    assert kilometry_na_mile(15) == 9,322560596643878
+    assert kilometry_na_mile(15) == 9.322560596643878
