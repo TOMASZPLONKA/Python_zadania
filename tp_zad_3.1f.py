@@ -26,7 +26,7 @@ print(pole_trojkata.__doc__ )
 print(60*'=')
 
 def test_pole_trojkata_blad():
-    assert pole_trojkata(1,1,5) == False
+    assert pole_trojkata(1,1,5) == 'Podane liczby nie stanowią trójkąta'
 
 def test_pole_trojkata_ok():
     assert pole_trojkata(3,4,5 ) == 6
