@@ -29,7 +29,7 @@ print(bmi.__doc__ )
 print(60*'=')
 
 def test_BMI_Normal():
-    assert BMI(87,187) == 24.88
+    assert bmi(87,187) == 24.88
 
 def test_BMI_Nadwaga():
-    assert BMI(110,200) == 27.5
+    assert bmi(110,200) == 27.5
