@@ -3,17 +3,21 @@ class Vowels:
         self.napis = napis
         self.limit = len(napis)
 
-
     def __iter__(self):
-        self.index = 0
+        self.a = 0
         return self
 
-    def __next__(self):
-        if self.index > self.limit:
-            raise StopIteration
-        for char in napis:
-            if char in ('a','e','i','o','u','y'):
-                return char
+    def __str__(self):
+        return f"Napis: {self.napis}"
 
-for x in Vowels('ala ma kota'):
+    def __next__(self):
+        for x in self.napis:
+            x = self.napis[self.a]
+            self.a += 1
+            if x in ('a','e','i','o','u','y'):
+                return x
+            if self.a == self.limit:
+                raise StopIteration
+
+for x in Vowels('poniedziałek'):
     print(x)
