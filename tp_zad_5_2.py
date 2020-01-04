@@ -7,17 +7,13 @@ class Vowels:
         self.a = 0
         return self
 
-    def __str__(self):
-        return f"Napis: {self.napis}"
-
     def __next__(self):
-        for x in self.napis:
+        while self.a < self.limit:
             x = self.napis[self.a]
             self.a += 1
-            if x in ('a','e','i','o','u','y'):
+            if x.lower() in ('a','e','i','o','u','y'):
                 return x
-            if self.a == self.limit:
-                raise StopIteration
+        raise StopIteration
 
-for x in Vowels('poniedziałek'):
+for x in Vowels('Ala ma kota'):
     print(x)
