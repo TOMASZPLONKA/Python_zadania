@@ -1,0 +1,8 @@
+Ala ma kota
+poniedziałek
+wtorek
+środa
+czwartek
+piątek
+sobota
+niedziela
